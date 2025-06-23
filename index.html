@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Sona Template">
+    <meta name="keywords" content="Sona, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Центр поддержки</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Offcanvas Menu Section Begin -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="canvas-open">
+        <i class="icon_menu"></i>
+    </div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="icon_close"></i>
+        </div>
+        <div class="search-icon  search-switch">
+            <i class="icon_search"></i>
+        </div>
+        <div class="header-configure-area">
+            <div class="language-option">
+                <img src="img/flag.png" alt="">
+                <span>RU <i class=""></i></span>
+            </div>
+            <a href="#" class="bk-btn">Получить консультанцию</a>
+        </div>
+        <nav class="mainmenu mobile-menu">
+            <nav class="mainmenu mobile-menu">
+                <ul>
+                    <li class="active"><a href="./index.html">Главная</a></li>
+                    <li><a href="#about-us">О компании</a></li>
+                    <li><a href="./pages.html">Услуги</a>
+                        <ul class="dropdown">
+                            <li><a href="./room-details.html">Банкротство</a></li>
+                            <li><a href="#">Защита в суде</a></li>
+                            <li><a href="#">Возврат страховок</a></li>
+                            <li><a href="#">Трудовое право</a></li>
+                            <li><a href="#">И т.д.</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./rooms.html">Отзывы наших клиентов</a></li>
+                    <li><a href="./contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+            
+                </li>
+                <li><a href="./rooms.html">Отзывы наших клиентов</a></li>
+                <li><a href="./contact.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="top-social">
+            <!-- Заменяем ссылки на мессенджеры -->
+            <a href="https://t.me/yourtelegram" target="_blank"><i class="fa fa-telegram"></i></a>
+            <a href="https://wa.me/79991112233" target="_blank"><i class="fa fa-whatsapp"></i></a>
+        </div>
+        <ul class="top-widget">
+            <li><i class="fa fa-phone"></i> +79991112233</li>
+            <li><i class="fa fa-envelope"></i> yourmail@.mail.ru</li>
+        </ul>
+    </div>
+    <!-- Offcanvas Menu Section End -->
+
+    <!-- Header Section Begin -->
+<header class="header-section">
+    <div class="top-nav">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <ul class="tn-left">
+                        <li><i class="fa fa-phone"></i> +79991112233</li>
+                        <li><i class="fa fa-envelope"></i> yourmail@.mail.ru</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <div class="tn-right">
+                        <div class="top-social">
+                            <!-- Заменяем ссылки на мессенджеры -->
+                            <a href="https://t.me/yourtelegram" target="_blank"><i class="fa fa-telegram"></i></a>
+                            <a href="https://wa.me/79991112233" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                        </div>
+                        <a href="#" class="bk-btn" id="openConsultationModal">Получить консультацию</a>
+                        <div class="language-option">
+                            <img src="img/flag.png" alt="">
+                            <span>RU <i class=""></i></span>
+                            <div class="flag-dropdown">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Модальное окно для выбора -->
+<div id="consultationModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Выберите способ консультации</h2>
+        <button class="consultation-option" id="callOption">Позвонить или написать на почту</button>
+        <button class="consultation-option" id="onlineConsultationOption">Консультация онлайн</button>
+    </div>
+</div>
+
+                
+                <!-- Модальное окно для чата с юристом (консультация онлайн) -->
+                <div id="chatModal" class="modal">
+                    <div class="modal-content chat">
+                        <span class="close-btn" id="closeChatModal">&times;</span>
+                        <h2>Чат с юристом</h2>
+                        <div id="chatBox" class="chat-box">
+                            <div class="message received">Здравствуйте, чем могу помочь?</div>
+                            <div class="message sent">Здравствуйте, мне нужна консультация по вопросу X.</div>
+                        </div>
+                        <textarea id="chatInput" placeholder="Введите ваше сообщение..."></textarea>
+                        <button id="sendChatMessage" class="send-btn">Отправить</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-item">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2">
+                    <div class="logo">
+                        <a href="./index.html">
+                            <img src="img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-10">
+                    <div class="nav-menu">
+                        <nav class="mainmenu">
+                            <ul>
+                                <li class="active"><a href="./index.html">Главная</a></li>
+                                <li><a href="#about-us">О компании</a></li>
+                                <li><a href="./pages.html">Услуги</a>
+                                    <ul class="dropdown">
+                                        <li><a href="./room-details.html">Банкротство</a></li>
+                                        <li><a href="#">Защита в суде</a></li>
+                                        <li><a href="#">Возврат страховок</a></li>
+                                        <li><a href="#">Трудовое право</a></li>
+                                        <li><a href="#">И т.д.</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="./rooms.html">Отзывы наших клиентов</a></li>
+                                <li><a href="./contact.html">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <div class="nav-right search-switch">
+                            <i class="icon_search"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- Header End -->
+
+    <!-- Hero Section Begin -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="hero-text">
+                        <h1>Экспресс консультация юриста в Саратове</h1>
+                        <p>Легкое и правильное решение любого правового вопроса</p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-5 offset-xl-2 offset-lg-1">
+                    <div class="booking-form">
+                        <h3>Получить консультацию</h3>
+                        <form id="contact-form" action="send_form.php" method="POST">
+                            <div class="check-date">
+                                <label for="name">Ваше имя:</label>
+                                <input type="text" class="input" id="name" name="name" required>
+                            </div>
+                            <div class="check-date">
+                                <label for="phone">Ваш номер телефона:</label>
+                                <input type="text" class="input" id="phone" name="phone" required>
+                            </div>
+                            <div class="select-option">
+                                <label for="question">По какому вопросу хотите обратиться:</label>
+                                <select id="question" name="question" required>
+                                    <option value="Банкротство">Банкротство</option>
+                                    <option value="Защита в суде">Защита в суде</option>
+                                    <option value="Возврат страховок">Возврат страховок</option>
+                                    <option value="Трудовое право">Трудовое право</option>
+                                </select>
+                            </div>
+                            <div class="check-date">
+                                <label for="message">Ваше обращение:</label>
+                                <textarea class="input1" id="message" name="message" cols="32.5" required></textarea>
+                            </div>
+                            <button type="submit">Отправить</button>
+                        </form>
+                        
+                        <div id="response-message"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider owl-carousel">
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-1.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-2.jpg"></div>
+            <div class="hs-item set-bg" data-setbg="img/hero/hero-3.jpg"></div>
+        </div>
+    </section>
+    
+    <!-- Hero Section End -->
+
+    <section class="aboutus-section spad" id="about-us">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <div class="section-title">
+                            <span>О нас</span>
+                            <h2>Сильная команда <br />юристов в Саратове</h2>
+                        </div>
+                        <p class="f-para">У нас работают настоящие профессионалы, любящие свое дело. Мы постоянно развиваемся и повышаем свою квалификацию, чтобы оказывать нашим клиентам юридические услуги на должном уровне. </p>
+                        <p class="s-para">Для любой вашей проблемы мы найдем нужное решение.</p>
+                        
+                        <!-- Скрытая дополнительная информация -->
+                        <div id="more-info" style="display: none;">
+                            <p>Дополнительная информация о нашей команде юристов, их опыте и подходах, с которыми мы работаем. Мы предлагаем широкий спектр услуг, начиная от консультаций и заканчивая сложными судебными делами.</p>
+                            <h3>Наши достижения:</h3>
+                    <ul>
+                        <li>Победа в более чем 500 судебных делах по защите интересов клиентов</li>
+                        <li>Доверие более 1000 клиентов, многие из которых обратились к нам повторно</li>
+                        <li>Активное участие в законодательных инициативах, направленных на защиту прав граждан</li>
+                        <li>Ведение крупных корпоративных дел, в том числе с международным элементом</li>
+                    </ul>
+                    <p>Каждое дело для нас — это не просто очередной случай, а уникальная ситуация, которая требует внимательного подхода и профессионального анализа. Мы готовы взять на себя любую юридическую задачу, независимо от сложности, и довести дело до успешного завершения. Наши юристы обладают обширным опытом работы как с частными лицами, так и с юридическими компаниями, что позволяет нам оказывать широкий спектр юридических услуг.
+
+                        
+                        С каждым днем мы стремимся развиваться и совершенствоваться, обучаясь новым методам и подходам в праве, чтобы гарантировать клиентам получение качественной и оперативной юридической помощи. Мы гордимся нашими успехами и многими выигранными делами, которые стали результатом упорной работы, стратегического подхода и глубоких знаний в различных областях права.</p>
+                        <p><strong>Наша цель — стать вашим надежным партнером в мире юриспруденции, который поможет вам решить любые правовые вопросы с минимальными затратами времени и сил.</strong></p>
+                        </div>
+                        
+                        <!-- Кнопка для раскрытия информации -->
+                        <a href="javascript:void(0);" class="primary-btn about-btn" id="toggle-info">Подробнее</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-pic">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <img src="img/about/about-1.jpg" alt="">
+                            </div>
+                            <div class="col-sm-6">
+                                <img src="img/about/about-2.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="services-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Наши ценности</span>
+                        <h2>Почему именно мы ?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i></i>
+                        <h4>Команда</h4>
+                        <p>Мы уважаем взгляды и мнение каждого сотрудника как важную часть единого целого. 
+                            При этом поощряем проявление индивидуальности, инициативности принятия решений и предложения новых подходов.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i></i>
+                        <h4>Результат</h4>
+                        <p>Мы не даем пустых обещаний. Всегда должны быть честны с людьми и искать только взаимовыгодные решения.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i></i>
+                        <h4>Довольный клиент</h4>
+                        <p>Мы должны делать всё, чтобы клиенту было комфортно с нами! Мы вовлечены в вопросы, с которыми к нам приходят. Вместо формализма хотим вкладывать душу.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i></i>
+                        <h4>Развитие</h4>
+                        <p>Мы совершенствуемся, поэтому постоянно меняемся согласно пожеланиям наших клиентов, сотрудников и реалиям рынка. Каждый из нас должен начинать с себя, делая всю систему лучше.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <i></i>
+                        <h4>Качество и эффективность</h4>
+                        <p>Мы постоянно должны думать о выгоде для конечного пользователя будь то сотрудник или клиент. При этом наши действия должны быть оперативны и приносить результат. Именно поэтому качество и эффективность всегда стоят рядом.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="service-item">
+                        <!-- Заменил значок на подходящий для нового текста -->
+                        <i ></i>
+                        <h4>Инновации</h4>
+                        <p>Мы стремимся внедрять новейшие технологии и подходы в нашу работу. Инновации — это ключ к нашему постоянному прогрессу и улучшению результатов.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="hp-room-section">
+        <div class="container-fluid">
+            <div class="section-title">
+                <span>Мы оказываем полный спектр юридических услуг</span>
+                <h2>Выберите нужную вкадку, исходя из ваших потребностей</h2>
+            </div>
+            <div class="hp-room-items">
+                <div class="hp-room-item set-bg" data-setbg="img/room/room-b1.jpg">
+                    <div class="hr-text">
+                        <h3>Для физ.лиц</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td>Представительство в суде</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Банкротство физических лиц</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Юридическая помощь тем, кто не может платить кредит</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Раздел имущества</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Расторжение брака</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Споры в рамках земельного права</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Споры в рамках семейного права</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Трудовые споры</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Юрист по недвижимости</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Взыскание неустойки с застройщика</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Возврат страховки по кредиту</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Автоюрист</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="hp-room-item set-bg" data-setbg="img/room/room-b2.jpg">
+                    <div class="hr-text">
+                        <h3>Для юр.лиц</h3>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class="r-o">Регистрация ООО, ОАО, ЗАО и ИП</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Ликвидация предприятия</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Банкротство предприятия</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Представительство в суде</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Лицензирование</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Торговая марка</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Юридическое сопровождение бизнеса</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="hp-room-item set-bg" data-setbg="img/room/room-b3.jpg">
+                    <div class="hr-text">
+                        <h3>ИТ-Услуги</h3>
+                        <table>
+                            <tbody>
+                                <h5 class="itgo">ООО «Единый центр инвест» - ИТ-компания, работающая на рынке с 2016 года. 
+                                    Опыт компаниии ИТ- решения позволяют заказчикам выстраивать свою работу юридического бизнеса на базе современных и востребованных технологий. 
+                                    Имеем опыт успешного долгосрочного сотрудничества с юридическими компаниями по всей России.</h5><br>
+                                    <h3><strong>Основные направления деятельности в сфере ИТ:</strong></h3><br>
+                                <tr>
+                                    <td class="r-o">Разработка программного обеспечения для юридических компаний</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Предоставление в пользование программного обеспечения по всему циклу работы с клиентами CRM «Е2» (зарегистрировано в Роспатенте N° 2019663674)</td>
+                                </tr>
+                                <tr>
+                                    <td class="r-o">Полное сопровождение, поддержка, адаптация ПО</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Testimonial Section Begin -->
+<section class="testimonial-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title">
+                    <span>Отзывы</span>
+                    <h2>Отзывы наших клиентов</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 offset-lg-2">
+                <div class="testimonial-slider owl-carousel">
+                    <div class="ts-item">
+                        <p>После того как я столкнулся с трудной ситуацией на работе, мне понадобился квалифицированный юрист. Я обратился к адвокату, и он смог защитить мои интересы в суде. Благодаря его профессионализму я выиграл дело и восстановил справедливость.</p>
+                        <div class="ti-author">
+                            <div class="rating">
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star-half_alt"></i>
+                            </div>
+                            <h5> - Сергей Иванов</h5>
+                        </div>
+                    </div>
+                    <div class="ts-item">
+                        <p>Обратился в эту юридическую фирму для решения вопроса по банкротству. Юрист подробно объяснил все этапы и возможные риски, благодаря его помощи я смог грамотно пройти все процедуры и остаться с минимальными потерями.</p>
+                        <div class="ti-author">
+                            <div class="rating">
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star-half_alt"></i>
+                            </div>
+                            <h5> - Анна Смирнова</h5>
+                        </div>
+                    </div>
+                    <div class="ts-item">
+                        <p>Благодаря адвокату, который вел моё дело по трудовому праву, я смог вернуть незаконно удержанную заработную плату. Он тщательно подготовил документы и представлял мои интересы в суде. Я очень благодарен за помощь!</p>
+                        <div class="ti-author">
+                            <div class="rating">
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star"></i>
+                                <i class="icon_star-half_alt"></i>
+                            </div>
+                            <h5> - Дмитрий Кузнецов</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial Section End -->
+
+
+    <!-- Blog Section Begin -->
+    <section class="blog-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Как проиходит сам процесс</span>
+                        <h2>С чего мы начинаем ?</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Разработаем пошаговый план под вашу ситуацию</span>
+                            <h4><a>Мы не работаем по шаблону, а глубоко погружаемся в проблему клиента и находим самые простые и быстрые решения</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Соберем весь пакет документов</span>
+                            <h4><a>Вам не придется стоять в очередях часами для получения вовсе не нужных документов</a></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="blog-item set-bg" data-setbg="img/blog/blog-1.jpg">
+                        <div class="bi-text">
+                            <span class="b-tag">Подадим их в органы власти</span>
+                            <h4><a>Мы не работаем по шаблону, а глубоко погружаемся в проблему клиента и находим самые простые и быстрые решения</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section End -->
+
+    <!-- Footer Section Begin -->
+    <footer class="footer-section">
+        <div class="container">
+            <div class="footer-text">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="ft-about">
+                            <div class="logo">
+                                <a href="#">
+                                    <img src="img/logo.png" alt="">
+                                </a>
+                            </div>
+                            <p>Мы помогаем людям  уже 10 лет</p>
+                            <div class="top-social">
+                                <!-- Заменяем ссылки на мессенджеры -->
+                                <a href="https://t.me/yourtelegram" target="_blank"><i class="fa fa-telegram"></i></a>
+                                <a href="https://wa.me/79991112233" target="_blank"><i class="fa fa-whatsapp"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 offset-lg-1">
+                        <div class="ft-contact">
+                            <h6>Связаться с нами</h6>
+                            <ul>
+                                <li>+79991112233</li>
+                                <li>yormailb@gmail.com</li>
+                                <li>Саратов тд тп</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright-option">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <ul>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Terms of use</a></li>
+                            <li><a href="#">Privacy</a></li>
+                            <li><a href="#">Environmental Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5">
+                        <div class="co-text"><p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a  target="_blank">pluccky!</a>
+  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+
+    <!-- Search model Begin -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch"><i class="icon_close"></i></div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Search model end -->
+    <script>
+        // Получаем элементы
+        const toggleButton = document.getElementById('toggle-info');
+        const moreInfo = document.getElementById('more-info');
+        
+        // Добавляем обработчик событий на кнопку
+        toggleButton.addEventListener('click', function() {
+            if (moreInfo.style.display === "none") {
+                moreInfo.style.display = "block";
+                toggleButton.textContent = "Скрыть информацию";  // Изменяем текст кнопки
+            } else {
+                moreInfo.style.display = "none";
+                toggleButton.textContent = "Подробнее";  // Восстанавливаем исходный текст
+            }
+        });
+        // Получаем элементы модальных окон
+const consultationModal = document.getElementById("consultationModal");
+const chatModal = document.getElementById("chatModal");
+const closeModal = document.getElementById("closeModal");
+const closeChatModal = document.getElementById("closeChatModal");
+const openConsultationModal = document.getElementById("openConsultationModal");
+
+// Открытие модального окна выбора консультации
+openConsultationModal.onclick = function() {
+    consultationModal.style.display = "block";
+}
+
+// Закрытие модального окна выбора консультации
+closeModal.onclick = function() {
+    consultationModal.style.display = "none";
+}
+
+// Открытие модального окна чата
+document.getElementById("onlineConsultationOption").onclick = function() {
+    consultationModal.style.display = "none";
+    chatModal.style.display = "block";
+}
+
+// Закрытие модального окна чата
+closeChatModal.onclick = function() {
+    chatModal.style.display = "none";
+}
+
+// Отправка сообщения в чат
+document.getElementById("sendChatMessage").onclick = function() {
+    const message = document.getElementById("chatInput").value;
+    if (message.trim() !== "") {
+        const newMessage = document.createElement("div");
+        newMessage.classList.add("message", "sent");
+        newMessage.textContent = message;
+        document.getElementById("chatBox").appendChild(newMessage);
+        document.getElementById("chatInput").value = ""; // Очистка поля ввода
+    }
+}
+
+// Закрытие модального окна при клике вне его области
+window.onclick = function(event) {
+    if (event.target == consultationModal || event.target == chatModal) {
+        consultationModal.style.display = "none";
+        chatModal.style.display = "none";
+    }
+}
+
+// Переход на страницу contact.html при нажатии на кнопку "Позвонить или написать на почту"
+document.getElementById("callOption").onclick = function() {
+    window.location.href = "contact.html"; // Переход на страницу contact.html
+}
+    
+
+    </script>
+    
+    
+    <!-- Js Plugins -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.slicknav.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
